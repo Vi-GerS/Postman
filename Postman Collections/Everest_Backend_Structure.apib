@@ -1,0 +1,991 @@
+FORMAT: 1A
+HOST: http://{url}:18083/backend/monitor
+
+# Everest Backend Structure
+Documentation:  https://wiki.viessmann.com/display/VPL/Everest+Postman+Collections
+
+# Group backend
+
+## Overview [/overview]
+
+### Get monitor main entry point view [GET]
+Returns list of subentities pointing to buildings and invitations
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## Installations Components [/installations/{installationId}/components]
+
++ Parameters
+    + installationId (string, required)
+
+
+### Get installation details [GET]
+Returns installation details by given installationID
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18083 Backend Monitor Installations Gateways Heating Devices PairingId Heating Circuits CircuitId [/:18083/backend/monitor/installations/{installationId}/gateways/{gatewaySerial}/heating-devices/{pairingId}/heating-circuits/{circuitId}]
+
++ Parameters
+    + installationId (string, required)
+
+        + Sample: {{installationId}}
+    + gatewaySerial (string, required)
+
+        + Sample: {{gatewaySerial}}
+    + pairingId (string, required)
+
+        + Sample: {{pairingId}}
+    + circuitId (string, required)
+
+        + Sample: {{circuitId}}
+
+### Get installation circuit details [GET]
+Returns circuit details by given installationID, gatewaySerial, pairingId and circuitId
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18083 Backend Monitor Companies Buildings [/:18083/backend/monitor/companies/{customerNumber}/buildings]
+
++ Parameters
+    + customerNumber (string, required)
+
+        + Sample: {{customerNumber}}
+
+### Get buildings [GET]
+Returns a list of buildings by given customerNumber
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## Companies Buildings Sidenav [/companies/{customerNumber}/buildings/{buildingId}/sidenav]
+
++ Parameters
+    + customerNumber (string, required)
+
+    + buildingId (string, required)
+
+
+### Get building details [GET]
+Returns building details by given buildingID
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18083 Backend Monitor Installations Domestic Hot Water Tank Temperature [/:18083/backend/monitor/installations/{installationId}/domestic-hot-water-tank/temperature]
+
++ Parameters
+    + installationId (string, required)
+
+        + Sample: {{installationId}}
+
+### Get domestic hot water target temperature [GET]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18083 Backend Monitor Users Dashboard Module Widget Monitoring [/:18083/backend/monitor/users/{userId}/dashboard-module-widget/monitoring]
+
++ Parameters
+    + userId (string, required)
+
+        + Sample: {{userId}}
+
+### Get monitor dashboard module [GET]
+Returns dashboard module by given userID
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18083 Backend Monitor Users Invitations Requested [/:18083/backend/monitor/users/{userId}/invitations/requested]
+
++ Parameters
+    + userId (string, required)
+
+        + Sample: {{userId}}
+
+### Get requested invitation collection [GET]
+returns requested invitation collection
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18083 Backend Monitor Users Invitations Received [/:18083/backend/monitor/users/{userId}/invitations/received]
+
++ Parameters
+    + userId (string, required)
+
+        + Sample: {{userId}}
+
+### Get received invitation collection [GET]
+returns received invitation collection
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18083 Backend Monitor Installations Heating Circuits Heating Schedule [/:18083/backend/monitor/installations/{installationId}/heating-circuits/{heatingCircuitsIndex}/heating-schedule]
+
++ Parameters
+    + installationId (string, required)
+
+        + Sample: {{installationId}}
+    + heatingCircuitsIndex (string, required)
+
+        + Sample: {{heatingCircuitsIndex}}
+
+### Update heating schedule [POST]
+Updates the complete heating schedule.
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## Module Classes [/module-classes]
+
+### Get all module classes [GET]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18081 Backend Dashboard Dashboards [/:18081/backend/dashboard/dashboards/{dashboardId}]
+
++ Parameters
+    + dashboardId (string, required)
+
+        + Sample: {{dashboardId}}
+
+### httpurl18081backenddashboarddashboardsdashboardId [GET]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+### httpurl18081backenddashboarddashboardsdashboardId [PUT]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+### httpurl18081backenddashboarddashboardsdashboardId [DELETE]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18081 Backend Dashboard Module Classes [/:18081/backend/dashboard/module-classes/{moduleClassId}]
+
++ Parameters
+    + moduleClassId (string, required)
+
+        + Sample: {{moduleClassId}}
+
+### Get a module classes by ID [GET]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18081 Backend Dashboard Module Widgets [/:18081/backend/dashboard/module-widgets/{moduleWidgetId}]
+
++ Parameters
+    + moduleWidgetId (string, required)
+
+        + Sample: {{moduleWidgetId}}
+
+### httpurl18081backenddashboardmodulewidgetsmoduleWidgetId [GET]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+### httpurl18081backenddashboardmodulewidgetsmoduleWidgetId [PUT]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+### httpurl18081backenddashboardmodulewidgetsmoduleWidgetId [DELETE]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18081 Backend Dashboard Dashboards Module Widgets [/:18081/backend/dashboard/dashboards/{dashboardId}/module-widgets]
+
++ Parameters
+    + dashboardId (string, required)
+
+        + Sample: {{dashboardId}}
+
+### httpurl18081backenddashboarddashboardsdashboardIdmodulewidgets [GET]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+### httpurl18081backenddashboarddashboardsdashboardIdmodulewidgets [POST]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18081 Backend Dashboard Users Dashboards [/:18081/backend/dashboard/users/{userId}/dashboards]
+
++ Parameters
+    + userId (string, required)
+
+        + Sample: {{userId}}
+
+### httpurl18081backenddashboardusersuserIddashboards [GET]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+### httpurl18081backenddashboardusersuserIddashboards [POST]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18082 Backend Gateway Gateways Details [/:18082/backend/gateway/gateways/{gatewaySerial}/details]
+
++ Parameters
+    + gatewaySerial (string, required)
+
+        + Sample: {{gatewaySerial}}
+
+### Get gateway details [GET]
+Returns details of gateway by given gatewaySerial
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18082 Backend Gateway Gateways Details Reboot [/:18082/backend/gateway/gateways/{gatewaySerial}/details/reboot]
+
++ Parameters
+    + gatewaySerial (string, required)
+
+        + Sample: {{gatewaySerial}}
+
+### Reboot a gateway [POST]
+Restart a gateway
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18082 Backend Gateway Installations Gateways Unregister [/:18082/backend/gateway/installations/{installationId}/gateways/{gatewaySerial}/unregister]
+
++ Parameters
+    + gatewaySerial (string, required)
+
+        + Sample: {{gatewaySerial}}
+    + installationId (string, required)
+
+        + Sample: {{installationId}}
+
+### Unregister a gateway [POST]
+Decouples a gateway from an installation
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18085 Backend Activity Stream Users Dashboard Module Widget Activities [/:18085/backend/activity-stream/users/{userId}/dashboard-module-widget/activities]
+
++ Parameters
+    + userId (string, required)
+
+        + Sample: {{userId}}
+
+### Get all data for the dashboard activities module of a user [GET]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18086 Backend Invitations Accept Wizard [/:18086/backend/invitations/accept/wizard/{wizardId}]
+
++ Parameters
+    + wizardId (string, required)
+
+        + Sample: {{wizardId}}
+
+### provide the invitation wizard steps accept [POST]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## By WizardId [/{wizardId}]
+
++ Parameters
+    + wizardId (string, required)
+
+
+### provide the invitation wizard steps create [POST]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 (application/json)
+    + Attributes (create without new building)
+
+
+
+## 18088 Backend Profile Example [/:18088/backend/profile/example/{exampleId}{?exampleQuery}]
+
++ Parameters
+    + exampleId (string, required)
+
+        + Sample: {{exampleId}}
+
+### Get Example [GET]
+Returns an example resource
++ Parameters
+    + exampleQuery (string, required)
+
+        + Sample: {{exampleQuery}}
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## Contractors Contact By ViCustomerNumber [/contractors/{viCustomerNumber}/contact]
+
++ Parameters
+    + viCustomerNumber (string, required)
+
+
+### Set contact information [PUT]
+Returns list with heating contractors close to installation address. Query parameters: Option 1: installationId OR Option 2: longitude, latitude, countryCode, Optional and valid for both options: perimeter
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+    + Attributes (Set contact informationRequest)
+
+
++ Response 200 
+
+
+
+
+## Contractor [/contractor]
+
+### Get the chosen contractor [GET]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+### Remove the chosen contractor [DELETE]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18089 Backend Vicare Contractors [/:18089/backend/vicare/contractors{?installationId}]
+
+### Get contractors [GET]
+TODO: Add Description
++ Parameters
+    + installationId (string, required)
+
+        + Sample: {{installationId}}
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## Contractors Select By CustomerNumber [/contractors/{customerNumber}/select]
+
++ Parameters
+    + customerNumber (string, required)
+
+
+### Set the chosen contractor [POST]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## Contractors Access By CustomerNumber [/contractors/{customerNumber}/access]
+
++ Parameters
+    + customerNumber (string, required)
+
+
+### Grant or drop access for monitoring [POST]
+TODO: Add Description
++ Attributes
+    + access (string, required)
+
+        + Sample: true
+    + message (string, required)
+
+        + Sample: This is a message
+
++ Request (application/x-www-form-urlencoded)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## Invitations [/invitations]
+
+### Get invited family  friends [GET]
+TODO: Add Description
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+
+# Group User
+
+## 1234 Details [/1234/details]
+
+### Get user details for end customer [GET]
+Returns user details for end customer
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 4567 Details [/4567/details]
+
+### Get user details for heating installer [GET]
+Returns user details for heating installer
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 7890 Details [/7890/details]
+
+### Get user details for viessmann group [GET]
+Returns user details for viessmann group
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18084 Users Users By UserId [/:18084/users/{userId}/users{?userGroup,searchTerm,role}]
+
++ Parameters
+    + userId (string, required)
+
+        + Sample: {{userId}}
+
+### Get users overview list [GET]
+Returns users overview for given user group as query paramater
++ Parameters
+    + userGroup (string, required)
+
+        + Sample: {{userGroup}}
+    + searchTerm (string, required)
+
+        + Sample: {{searchTerm}}
+    + role (string, required)
+
+        + Sample: {{role}}
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+## 18084 Users Users By UserId [/:18084/users/{userId}/users]
+
++ Parameters
+    + userId (string, required)
+
+        + Sample: {{userId}}
+
+### Get users overview list [POST]
+Returns users overview for given user group in post payload
+
++ Request (application/json)
+    + Headers
+
+            Accept:application/vnd.siren+json, application/json
+
+
+
+
++ Response 200 
+
+
+
+
+
+# Data Structures
+
+## create without new building (object)
+
+
+### Properties
++ `class`: `[
+  "invitation-wizard"
+]` (array[string], required) 
++ `properties`: `[
+  "invitation-wizard"
+]` (Properties, required) 
++ `entities`: `[
+  "invitation-wizard"
+]` (array[Entity], required) 
++ `actions`: `[
+  "invitation-wizard"
+]` (array[Action], required) 
+
+
+## Properties (object)
+
+
+### Properties
++ `title`: `Frontend-Invitations_INVITATION_WIZARD_TITLE` (string, required) 
++ `progressionTitle`: `Frontend-Invitations_PAGING_PREFIX` (string, required) 
++ `progressionIndex`: `1` (string, required) 
++ `progressionTotal`: `2` (string, required) 
+
+
+## Entity (object)
+
+
+### Properties
++ `class`: `[
+  "full-length",
+  "text"
+]` (array[string], required) 
++ `rel`: `[
+  "http://schema.viessmann.com/link-relations#field"
+]` (array[string], required) 
++ `properties`: `[
+  "http://schema.viessmann.com/link-relations#field"
+]` (Properties3, required) 
+
+
+## Properties3 (object)
+
+
+### Properties
++ `title`: `Frontend-Invitations_GATEWAY_ID_TITLE` (string, required) 
+
+
+## Action (object)
+
+
+### Properties
++ `name`: `next` (string, required) 
++ `title`: `NEXT` (string, required) 
++ `method`: `POST` (string, required) 
++ `href`: `http://52.169.79.192:18086/backend/invitations/create/wizard/1` (string, required) 
++ `fields`: `http://52.169.79.192:18086/backend/invitations/create/wizard/1` (array[Field], required) 
+
+
+## Field (object)
+
+
+### Properties
++ `name`: `gatewayId` (string, required) 
++ `type`: `text` (string, required) 
++ `value`: `7571381602763107` (string, required) 
+
+
+## Set contact informationRequest (object)
+
+
+### Properties
++ `phoneNumbers` (array[PhoneNumber], required) 
++ `emails` (array[Email], required) 
+
+
+## PhoneNumber (object)
+
+
+### Properties
++ `value`: `123456789` (string, required) 
++ `favorite`: `false` (boolean, required) 
+
+
+## Email (object)
+
+
+### Properties
++ `value`: `info@röhring.de` (string, required) 
++ `favorite`: `false` (boolean, required) 
+
