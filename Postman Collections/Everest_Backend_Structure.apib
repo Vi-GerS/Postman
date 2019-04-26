@@ -7,18 +7,14 @@
   },
   "item": [
     {
-      "_postman_id": "2657417-65578a87-9da2-4dd3-12ef-b939b93f80e8",
       "name": "Monitor",
-      "description": null,
       "item": [
         {
-          "_postman_id": "2657417-c0120f67-4a97-8998-ba36-2eb4ec3417fb",
           "name": "backend",
-          "description": "Folder for backend",
           "item": [
             {
-              "_postman_id": "2657417-1653bfe2-faa8-5dd9-1051-3ef2f3bf81b0",
               "name": "Get monitor main entry point view",
+              "_postman_id": "2657417-1653bfe2-faa8-5dd9-1051-3ef2f3bf81b0",
               "request": {
                 "method": "GET",
                 "header": [
@@ -35,18 +31,14 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "http://{{url}}:18083/backend/monitor/overview",
                 "description": "Returns list of subentities pointing to buildings and invitations"
               },
               "response": []
             },
             {
-              "_postman_id": "2657417-f798d4ec-8e44-5029-16fb-037fd188433c",
               "name": "Get installation details",
+              "_postman_id": "2657417-f798d4ec-8e44-5029-16fb-037fd188433c",
               "request": {
                 "method": "GET",
                 "header": [
@@ -63,18 +55,14 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "http://{{url}}:18083/backend/monitor/installations/{{installationId}}/components",
                 "description": "Returns installation details by given installationID"
               },
               "response": []
             },
             {
-              "_postman_id": "2657417-0da7666d-b320-5cfc-a890-08a32e0a9642",
               "name": "Get installation circuit details",
+              "_postman_id": "2657417-0da7666d-b320-5cfc-a890-08a32e0a9642",
               "request": {
                 "method": "GET",
                 "header": [
@@ -91,10 +79,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18083/backend/monitor/installations/{{installationId}}/gateways/{{gatewaySerial}}/heating-devices/{{pairingId}}/heating-circuits/:circuitId",
                   "protocol": "http",
@@ -117,19 +101,23 @@
                   "variable": [
                     {
                       "key": "installationId",
-                      "value": "{{installationId}}"
+                      "value": "{{installationId}}",
+                      "type": "string"
                     },
                     {
                       "key": "gatewaySerial",
-                      "value": "{{gatewaySerial}}"
+                      "value": "{{gatewaySerial}}",
+                      "type": "string"
                     },
                     {
                       "key": "pairingId",
-                      "value": "{{pairingId}}"
+                      "value": "{{pairingId}}",
+                      "type": "string"
                     },
                     {
                       "key": "circuitId",
-                      "value": "{{circuitId}}"
+                      "value": "{{circuitId}}",
+                      "type": "string"
                     }
                   ]
                 },
@@ -138,8 +126,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-4980e3fa-d513-4968-e847-16fae2454286",
               "name": "Get buildings",
+              "_postman_id": "2657417-4980e3fa-d513-4968-e847-16fae2454286",
               "request": {
                 "method": "GET",
                 "header": [
@@ -156,10 +144,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18083/backend/monitor/companies/{{customerNumber}}/buildings",
                   "protocol": "http",
@@ -177,7 +161,8 @@
                   "variable": [
                     {
                       "key": "customerNumber",
-                      "value": "{{customerNumber}}"
+                      "value": "{{customerNumber}}",
+                      "type": "string"
                     }
                   ]
                 },
@@ -186,8 +171,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-12e68675-a1dd-16e8-a152-68a7b0d7b7c9",
               "name": "Get building details",
+              "_postman_id": "2657417-12e68675-a1dd-16e8-a152-68a7b0d7b7c9",
               "request": {
                 "method": "GET",
                 "header": [
@@ -204,18 +189,14 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "http://{{url}}:18083/backend/monitor/companies/{{customerNumber}}/buildings/{{buildingId}}/sidenav",
                 "description": "Returns building details by given buildingID"
               },
               "response": []
             },
             {
-              "_postman_id": "2657417-f2c7472e-b50a-78f5-83ac-72e36b7d63f8",
               "name": "Get domestic hot water target temperature",
+              "_postman_id": "2657417-f2c7472e-b50a-78f5-83ac-72e36b7d63f8",
               "request": {
                 "method": "GET",
                 "header": [
@@ -232,10 +213,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18083/backend/monitor/installations/{{installationId}}/domestic-hot-water-tank/temperature",
                   "protocol": "http",
@@ -254,7 +231,8 @@
                   "variable": [
                     {
                       "key": "installationId",
-                      "value": "{{installationId}}"
+                      "value": "{{installationId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -262,8 +240,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-70b7ba27-b480-d086-e3f6-615b58021365",
               "name": "Get monitor dashboard module",
+              "_postman_id": "2657417-70b7ba27-b480-d086-e3f6-615b58021365",
               "request": {
                 "method": "GET",
                 "header": [
@@ -280,10 +258,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18083/backend/monitor/users/{{userId}}/dashboard-module-widget/monitoring",
                   "protocol": "http",
@@ -302,7 +276,8 @@
                   "variable": [
                     {
                       "key": "userId",
-                      "value": "{{userId}}"
+                      "value": "{{userId}}",
+                      "type": "string"
                     }
                   ]
                 },
@@ -311,8 +286,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-ad3e6eee-c077-2e95-6e4c-da5b2d94aa5a",
               "name": "Get requested invitation collection",
+              "_postman_id": "2657417-ad3e6eee-c077-2e95-6e4c-da5b2d94aa5a",
               "request": {
                 "method": "GET",
                 "header": [
@@ -329,10 +304,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18083/backend/monitor/users/{{userId}}/invitations/requested",
                   "protocol": "http",
@@ -351,7 +322,8 @@
                   "variable": [
                     {
                       "key": "userId",
-                      "value": "{{userId}}"
+                      "value": "{{userId}}",
+                      "type": "string"
                     }
                   ]
                 },
@@ -360,8 +332,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-18d54683-f7ba-3f60-e719-f0219a3bbc1e",
               "name": "Get received invitation collection",
+              "_postman_id": "2657417-18d54683-f7ba-3f60-e719-f0219a3bbc1e",
               "request": {
                 "method": "GET",
                 "header": [
@@ -378,10 +350,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18083/backend/monitor/users/{{userId}}/invitations/received",
                   "protocol": "http",
@@ -400,7 +368,8 @@
                   "variable": [
                     {
                       "key": "userId",
-                      "value": "{{userId}}"
+                      "value": "{{userId}}",
+                      "type": "string"
                     }
                   ]
                 },
@@ -409,8 +378,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-555ab7a1-c595-97e7-d7a1-9164f123e25c",
               "name": "Update heating schedule",
+              "_postman_id": "2657417-555ab7a1-c595-97e7-d7a1-9164f123e25c",
               "request": {
                 "method": "POST",
                 "header": [
@@ -450,11 +419,13 @@
                   "variable": [
                     {
                       "key": "installationId",
-                      "value": "{{installationId}}"
+                      "value": "{{installationId}}",
+                      "type": "string"
                     },
                     {
                       "key": "heatingCircuitsIndex",
-                      "value": "{{heatingCircuitsIndex}}"
+                      "value": "{{heatingCircuitsIndex}}",
+                      "type": "string"
                     }
                   ]
                 },
@@ -463,23 +434,22 @@
               "response": []
             }
           ],
+          "_postman_id": "2657417-c0120f67-4a97-8998-ba36-2eb4ec3417fb",
+          "description": "Folder for backend",
           "_postman_isSubFolder": true
         }
-      ]
+      ],
+      "_postman_id": "2657417-65578a87-9da2-4dd3-12ef-b939b93f80e8"
     },
     {
-      "_postman_id": "2657417-83a82ec3-15b3-0b6f-3199-09479e8f8953",
       "name": "Dashboard",
-      "description": null,
       "item": [
         {
-          "_postman_id": "2657417-7f292709-6495-4ba3-102c-e19c98f3a8f8",
           "name": "backend",
-          "description": "Folder for backend",
           "item": [
             {
-              "_postman_id": "2657417-adae7090-f2b8-e047-f18f-c4b27777efa4",
               "name": "Get all module classes",
+              "_postman_id": "2657417-adae7090-f2b8-e047-f18f-c4b27777efa4",
               "request": {
                 "method": "GET",
                 "header": [
@@ -496,17 +466,13 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "http://{{url}}:18081/backend/dashboard/module-classes"
               },
               "response": []
             },
             {
-              "_postman_id": "2657417-8e6f1bcf-a938-e574-994c-bb4d2089a029",
               "name": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}",
+              "_postman_id": "2657417-8e6f1bcf-a938-e574-994c-bb4d2089a029",
               "request": {
                 "method": "GET",
                 "header": [
@@ -523,10 +489,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}",
                   "protocol": "http",
@@ -543,7 +505,8 @@
                   "variable": [
                     {
                       "key": "dashboardId",
-                      "value": "{{dashboardId}}"
+                      "value": "{{dashboardId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -551,8 +514,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-0df49cc5-25f6-45bf-78e5-9501101eee47",
               "name": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}",
+              "_postman_id": "2657417-0df49cc5-25f6-45bf-78e5-9501101eee47",
               "request": {
                 "method": "PUT",
                 "header": [
@@ -569,10 +532,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}",
                   "protocol": "http",
@@ -589,7 +548,8 @@
                   "variable": [
                     {
                       "key": "dashboardId",
-                      "value": "{{dashboardId}}"
+                      "value": "{{dashboardId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -597,8 +557,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-6e20feff-d966-d140-bc4c-36accc607468",
               "name": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}",
+              "_postman_id": "2657417-6e20feff-d966-d140-bc4c-36accc607468",
               "request": {
                 "method": "DELETE",
                 "header": [
@@ -615,10 +575,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}",
                   "protocol": "http",
@@ -635,7 +591,8 @@
                   "variable": [
                     {
                       "key": "dashboardId",
-                      "value": "{{dashboardId}}"
+                      "value": "{{dashboardId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -643,8 +600,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-e0761f9d-8275-2c1c-c778-82f394d9aaff",
               "name": "Get a module classes by ID",
+              "_postman_id": "2657417-e0761f9d-8275-2c1c-c778-82f394d9aaff",
               "request": {
                 "method": "GET",
                 "header": [
@@ -661,10 +618,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18081/backend/dashboard/module-classes/{{moduleClassId}}",
                   "protocol": "http",
@@ -681,7 +634,8 @@
                   "variable": [
                     {
                       "key": "moduleClassId",
-                      "value": "{{moduleClassId}}"
+                      "value": "{{moduleClassId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -689,8 +643,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-ef0e0b8e-8096-c148-bdd3-f9de77030c6c",
               "name": "http://{{url}}:18081/backend/dashboard/module-widgets/{{moduleWidgetId}}",
+              "_postman_id": "2657417-ef0e0b8e-8096-c148-bdd3-f9de77030c6c",
               "request": {
                 "method": "GET",
                 "header": [
@@ -707,10 +661,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18081/backend/dashboard/module-widgets/{{moduleWidgetId}}",
                   "protocol": "http",
@@ -727,7 +677,8 @@
                   "variable": [
                     {
                       "key": "moduleWidgetId",
-                      "value": "{{moduleWidgetId}}"
+                      "value": "{{moduleWidgetId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -735,8 +686,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-ee453727-16c5-1a0f-823a-27ebaeae93df",
               "name": "http://{{url}}:18081/backend/dashboard/module-widgets/{{moduleWidgetId}}",
+              "_postman_id": "2657417-ee453727-16c5-1a0f-823a-27ebaeae93df",
               "request": {
                 "method": "PUT",
                 "header": [
@@ -773,7 +724,8 @@
                   "variable": [
                     {
                       "key": "moduleWidgetId",
-                      "value": "{{moduleWidgetId}}"
+                      "value": "{{moduleWidgetId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -781,8 +733,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-23d14471-876c-1b05-ad0b-b3deb47e5f86",
               "name": "http://{{url}}:18081/backend/dashboard/module-widgets/{{moduleWidgetId}}",
+              "_postman_id": "2657417-23d14471-876c-1b05-ad0b-b3deb47e5f86",
               "request": {
                 "method": "DELETE",
                 "header": [
@@ -799,10 +751,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18081/backend/dashboard/module-widgets/{{moduleWidgetId}}",
                   "protocol": "http",
@@ -819,7 +767,8 @@
                   "variable": [
                     {
                       "key": "moduleWidgetId",
-                      "value": "{{moduleWidgetId}}"
+                      "value": "{{moduleWidgetId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -827,8 +776,8 @@
               "response": []
             },
             {
+              "name": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}/module-widgets",
               "_postman_id": "2657417-5eed4589-7e9b-eda8-8dc2-32e925cfee05",
-              "name": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}/module-widgets",
               "request": {
                 "method": "GET",
                 "header": [
@@ -845,10 +794,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}/module-widgets",
                   "protocol": "http",
@@ -866,7 +811,8 @@
                   "variable": [
                     {
                       "key": "dashboardId",
-                      "value": "{{dashboardId}}"
+                      "value": "{{dashboardId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -874,8 +820,8 @@
               "response": []
             },
             {
+              "name": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}/module-widgets",
               "_postman_id": "2657417-ade63ce1-5e8b-a3a1-f097-55a91f8badfb",
-              "name": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}/module-widgets",
               "request": {
                 "method": "POST",
                 "header": [
@@ -913,7 +859,8 @@
                   "variable": [
                     {
                       "key": "dashboardId",
-                      "value": "{{dashboardId}}"
+                      "value": "{{dashboardId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -921,8 +868,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-7c340907-3d24-ace4-4871-f0d90b7143d8",
               "name": "http://{{url}}:18081/backend/dashboard/users/{{userId}}/dashboards",
+              "_postman_id": "2657417-7c340907-3d24-ace4-4871-f0d90b7143d8",
               "request": {
                 "method": "GET",
                 "header": [
@@ -939,10 +886,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18081/backend/dashboard/users/{{userId}}/dashboards",
                   "protocol": "http",
@@ -960,7 +903,8 @@
                   "variable": [
                     {
                       "key": "userId",
-                      "value": "{{userId}}"
+                      "value": "{{userId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -968,8 +912,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-66a88dc3-7d7c-25ca-9461-1d3a9494c5b3",
               "name": "http://{{url}}:18081/backend/dashboard/users/{{userId}}/dashboards",
+              "_postman_id": "2657417-66a88dc3-7d7c-25ca-9461-1d3a9494c5b3",
               "request": {
                 "method": "POST",
                 "header": [
@@ -986,10 +930,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18081/backend/dashboard/users/{{userId}}/dashboards",
                   "protocol": "http",
@@ -1007,7 +947,8 @@
                   "variable": [
                     {
                       "key": "userId",
-                      "value": "{{userId}}"
+                      "value": "{{userId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -1015,23 +956,22 @@
               "response": []
             }
           ],
+          "_postman_id": "2657417-7f292709-6495-4ba3-102c-e19c98f3a8f8",
+          "description": "Folder for backend",
           "_postman_isSubFolder": true
         }
-      ]
+      ],
+      "_postman_id": "2657417-83a82ec3-15b3-0b6f-3199-09479e8f8953"
     },
     {
-      "_postman_id": "2657417-60773510-146a-1ff6-5fc1-af01c6c63677",
       "name": "Gateway",
-      "description": null,
       "item": [
         {
-          "_postman_id": "2657417-941022ba-5384-2029-c255-f2b628c8cd44",
           "name": "backend",
-          "description": "Folder for backend",
           "item": [
             {
-              "_postman_id": "2657417-1402fe90-05d1-2762-a281-6e5423a9fc25",
               "name": "Get gateway details",
+              "_postman_id": "2657417-1402fe90-05d1-2762-a281-6e5423a9fc25",
               "request": {
                 "method": "GET",
                 "header": [
@@ -1048,10 +988,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18082/backend/gateway/gateways/{{gatewaySerial}}/details",
                   "protocol": "http",
@@ -1069,7 +1005,8 @@
                   "variable": [
                     {
                       "key": "gatewaySerial",
-                      "value": "{{gatewaySerial}}"
+                      "value": "{{gatewaySerial}}",
+                      "type": "string"
                     }
                   ]
                 },
@@ -1078,8 +1015,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-d2d5f1a7-64f8-268d-0d83-839a23edeaaa",
               "name": "Reboot a gateway",
+              "_postman_id": "2657417-d2d5f1a7-64f8-268d-0d83-839a23edeaaa",
               "request": {
                 "method": "POST",
                 "header": [
@@ -1096,10 +1033,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18082/backend/gateway/gateways/{{gatewaySerial}}/details/reboot",
                   "protocol": "http",
@@ -1118,7 +1051,8 @@
                   "variable": [
                     {
                       "key": "gatewaySerial",
-                      "value": "{{gatewaySerial}}"
+                      "value": "{{gatewaySerial}}",
+                      "type": "string"
                     }
                   ]
                 },
@@ -1127,8 +1061,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-879c1a0b-820a-659e-5bf7-c9a874b59330",
               "name": "Unregister a gateway",
+              "_postman_id": "2657417-879c1a0b-820a-659e-5bf7-c9a874b59330",
               "request": {
                 "method": "POST",
                 "header": [
@@ -1145,10 +1079,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18082/backend/gateway/installations/{{installationId}}/gateways/{{gatewaySerial}}/unregister",
                   "protocol": "http",
@@ -1168,11 +1098,13 @@
                   "variable": [
                     {
                       "key": "gatewaySerial",
-                      "value": "{{gatewaySerial}}"
+                      "value": "{{gatewaySerial}}",
+                      "type": "string"
                     },
                     {
                       "key": "installationId",
-                      "value": "{{installationId}}"
+                      "value": "{{installationId}}",
+                      "type": "string"
                     }
                   ]
                 },
@@ -1181,23 +1113,22 @@
               "response": []
             }
           ],
+          "_postman_id": "2657417-941022ba-5384-2029-c255-f2b628c8cd44",
+          "description": "Folder for backend",
           "_postman_isSubFolder": true
         }
-      ]
+      ],
+      "_postman_id": "2657417-60773510-146a-1ff6-5fc1-af01c6c63677"
     },
     {
-      "_postman_id": "2657417-ee2ba13a-4851-03c3-0848-568eec06d6a7",
       "name": "Activity Stream",
-      "description": null,
       "item": [
         {
-          "_postman_id": "2657417-883a6b24-2a7d-ea4c-69bf-e7593535c1c9",
           "name": "backend",
-          "description": "Folder for backend",
           "item": [
             {
-              "_postman_id": "2657417-51e31249-75a8-834c-7ef4-f877a34ca1ef",
               "name": "Get all data for the dashboard activities module of a user",
+              "_postman_id": "2657417-51e31249-75a8-834c-7ef4-f877a34ca1ef",
               "request": {
                 "method": "GET",
                 "header": [
@@ -1214,10 +1145,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18085/backend/activity-stream/users/{{userId}}/dashboard-module-widget/activities",
                   "protocol": "http",
@@ -1236,7 +1163,8 @@
                   "variable": [
                     {
                       "key": "userId",
-                      "value": "{{userId}}"
+                      "value": "{{userId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -1244,18 +1172,19 @@
               "response": []
             }
           ],
+          "_postman_id": "2657417-883a6b24-2a7d-ea4c-69bf-e7593535c1c9",
+          "description": "Folder for backend",
           "_postman_isSubFolder": true
         }
-      ]
+      ],
+      "_postman_id": "2657417-ee2ba13a-4851-03c3-0848-568eec06d6a7"
     },
     {
-      "_postman_id": "2657417-1c7e2508-2ae7-29c8-e129-aef7f03db950",
       "name": "User",
-      "description": null,
       "item": [
         {
-          "_postman_id": "2657417-de0f9d08-c5ce-7300-37c7-7743968950b4",
           "name": "Get user details for end customer",
+          "_postman_id": "2657417-de0f9d08-c5ce-7300-37c7-7743968950b4",
           "request": {
             "method": "GET",
             "header": [
@@ -1272,18 +1201,14 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "http://{{url}}:18084/users/1234/details",
             "description": "Returns user details for end customer"
           },
           "response": []
         },
         {
-          "_postman_id": "2657417-c3ea79a9-ee62-774a-306d-be3c406ea960",
           "name": "Get user details for heating installer",
+          "_postman_id": "2657417-c3ea79a9-ee62-774a-306d-be3c406ea960",
           "request": {
             "method": "GET",
             "header": [
@@ -1300,18 +1225,14 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "http://{{url}}:18084/users/4567/details",
             "description": "Returns user details for heating installer"
           },
           "response": []
         },
         {
-          "_postman_id": "2657417-64a771ad-c652-4eb1-7114-c189e1ac2342",
           "name": "Get user details for viessmann group",
+          "_postman_id": "2657417-64a771ad-c652-4eb1-7114-c189e1ac2342",
           "request": {
             "method": "GET",
             "header": [
@@ -1328,18 +1249,14 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "http://{{url}}:18084/users/7890/details",
             "description": "Returns user details for viessmann group"
           },
           "response": []
         },
         {
-          "_postman_id": "2657417-9728f47e-5daa-1523-f183-bb4d8e0372f6",
           "name": "Get users overview list",
+          "_postman_id": "2657417-9728f47e-5daa-1523-f183-bb4d8e0372f6",
           "request": {
             "method": "GET",
             "header": [
@@ -1356,10 +1273,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "http://{{url}}:18084/users/{{userId}}/users?userGroup={{userGroup}}&searchTerm={{searchTerm}}&role={{role}}",
               "protocol": "http",
@@ -1389,7 +1302,8 @@
               "variable": [
                 {
                   "key": "userId",
-                  "value": "{{userId}}"
+                  "value": "{{userId}}",
+                  "type": "string"
                 }
               ]
             },
@@ -1398,8 +1312,8 @@
           "response": []
         },
         {
-          "_postman_id": "2657417-a318ecdc-da19-c5c3-1db1-bfcbc3f01d73",
           "name": "Get users overview list",
+          "_postman_id": "2657417-a318ecdc-da19-c5c3-1db1-bfcbc3f01d73",
           "request": {
             "method": "POST",
             "header": [
@@ -1435,7 +1349,8 @@
               "variable": [
                 {
                   "key": "userId",
-                  "value": "{{userId}}"
+                  "value": "{{userId}}",
+                  "type": "string"
                 }
               ]
             },
@@ -1443,21 +1358,18 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2657417-1c7e2508-2ae7-29c8-e129-aef7f03db950"
     },
     {
-      "_postman_id": "2657417-ac2c5399-7b6d-5120-7dfe-cdb0187b6902",
       "name": "Invitation",
-      "description": null,
       "item": [
         {
-          "_postman_id": "2657417-32e87a81-1566-ca67-a210-1e63646948a8",
           "name": "backend",
-          "description": "Folder for backend",
           "item": [
             {
-              "_postman_id": "2657417-0a7fbfa9-1174-ae94-9e22-612a08f5f26e",
               "name": "provide the invitation wizard steps (accept)",
+              "_postman_id": "2657417-0a7fbfa9-1174-ae94-9e22-612a08f5f26e",
               "request": {
                 "method": "POST",
                 "header": [
@@ -1495,7 +1407,8 @@
                   "variable": [
                     {
                       "key": "wizardId",
-                      "value": "{{wizardId}}"
+                      "value": "{{wizardId}}",
+                      "type": "string"
                     }
                   ]
                 }
@@ -1503,7 +1416,6 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-4deb97f6-5c8c-c605-dbd1-11367a06fe58",
               "name": "provide the invitation wizard steps (create)",
               "event": [
                 {
@@ -1518,6 +1430,7 @@
                   }
                 }
               ],
+              "_postman_id": "2657417-4deb97f6-5c8c-c605-dbd1-11367a06fe58",
               "request": {
                 "method": "POST",
                 "header": [
@@ -1626,23 +1539,22 @@
               ]
             }
           ],
+          "_postman_id": "2657417-32e87a81-1566-ca67-a210-1e63646948a8",
+          "description": "Folder for backend",
           "_postman_isSubFolder": true
         }
-      ]
+      ],
+      "_postman_id": "2657417-ac2c5399-7b6d-5120-7dfe-cdb0187b6902"
     },
     {
-      "_postman_id": "2657417-9c0f7661-6d89-0f24-1a7f-a0e95366785d",
       "name": "Profile",
-      "description": null,
       "item": [
         {
-          "_postman_id": "2657417-a819d58f-ee55-d737-ebb7-5305b679dea9",
           "name": "backend",
-          "description": "Folder for backend",
           "item": [
             {
-              "_postman_id": "2657417-109c2338-62b4-9a6d-0770-969bb8eb5aa1",
               "name": "Get Example",
+              "_postman_id": "2657417-109c2338-62b4-9a6d-0770-969bb8eb5aa1",
               "request": {
                 "method": "GET",
                 "header": [
@@ -1659,10 +1571,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18088/backend/profile/example/{{exampleId}}?exampleQuery={{exampleQuery}}",
                   "protocol": "http",
@@ -1685,7 +1593,8 @@
                   "variable": [
                     {
                       "key": "exampleId",
-                      "value": "{{exampleId}}"
+                      "value": "{{exampleId}}",
+                      "type": "string"
                     }
                   ]
                 },
@@ -1694,23 +1603,22 @@
               "response": []
             }
           ],
+          "_postman_id": "2657417-a819d58f-ee55-d737-ebb7-5305b679dea9",
+          "description": "Folder for backend",
           "_postman_isSubFolder": true
         }
-      ]
+      ],
+      "_postman_id": "2657417-9c0f7661-6d89-0f24-1a7f-a0e95366785d"
     },
     {
-      "_postman_id": "2657417-bbd1470a-e6d1-8d3c-28ce-80b0889a3f40",
       "name": "ViCare",
-      "description": null,
       "item": [
         {
-          "_postman_id": "2657417-8f84b018-d0b2-607b-3107-2abcacc7d0cd",
           "name": "backend",
-          "description": "Folder for backend",
           "item": [
             {
-              "_postman_id": "2657417-d3d5f64b-d54a-8a30-2497-0736e0f49d0f",
               "name": "Set contact information",
+              "_postman_id": "2657417-d3d5f64b-d54a-8a30-2497-0736e0f49d0f",
               "request": {
                 "method": "PUT",
                 "header": [
@@ -1737,8 +1645,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-4a4b51ae-9b19-1a33-10e9-c1ee37e3f4f6",
               "name": "Get the chosen contractor",
+              "_postman_id": "2657417-4a4b51ae-9b19-1a33-10e9-c1ee37e3f4f6",
               "request": {
                 "method": "GET",
                 "header": [
@@ -1755,17 +1663,13 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "http://{{url}}:18089/backend/vicare/installations/{{installationId}}/contractor"
               },
               "response": []
             },
             {
-              "_postman_id": "2657417-aa94513f-6e71-7861-df6a-2dda964fea57",
               "name": "Remove the chosen contractor",
+              "_postman_id": "2657417-aa94513f-6e71-7861-df6a-2dda964fea57",
               "request": {
                 "method": "DELETE",
                 "header": [
@@ -1782,17 +1686,13 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "http://{{url}}:18089/backend/vicare/installations/{{installationId}}/contractor"
               },
               "response": []
             },
             {
-              "_postman_id": "2657417-82070245-c6de-f6c4-f798-c3557941ae67",
               "name": "Get contractors",
+              "_postman_id": "2657417-82070245-c6de-f6c4-f798-c3557941ae67",
               "request": {
                 "method": "GET",
                 "header": [
@@ -1809,10 +1709,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "http://{{url}}:18089/backend/vicare/contractors?installationId={{installationId}}",
                   "protocol": "http",
@@ -1828,8 +1724,7 @@
                   "query": [
                     {
                       "key": "installationId",
-                      "value": "{{installationId}}",
-                      "equals": true
+                      "value": "{{installationId}}"
                     }
                   ]
                 }
@@ -1837,8 +1732,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-2a206122-1217-1c52-4e9d-e31dedab23ac",
               "name": "Set the chosen contractor",
+              "_postman_id": "2657417-2a206122-1217-1c52-4e9d-e31dedab23ac",
               "request": {
                 "method": "POST",
                 "header": [
@@ -1855,17 +1750,13 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "http://{{url}}:18089/backend/vicare/installations/{{installationId}}/contractors/{{customerNumber}}/select"
               },
               "response": []
             },
             {
-              "_postman_id": "2657417-866cf6de-2d2b-f750-d126-d7c94244646d",
               "name": "Grant or drop access for monitoring",
+              "_postman_id": "2657417-866cf6de-2d2b-f750-d126-d7c94244646d",
               "request": {
                 "method": "POST",
                 "header": [
@@ -1888,13 +1779,11 @@
                     {
                       "key": "access",
                       "value": "true",
-                      "description": "",
                       "type": "text"
                     },
                     {
                       "key": "message",
                       "value": "This is a message",
-                      "description": "",
                       "type": "text"
                     }
                   ]
@@ -1904,8 +1793,8 @@
               "response": []
             },
             {
-              "_postman_id": "2657417-4e011b2b-14aa-6542-6491-fa468934e442",
               "name": "Get invited family & friends",
+              "_postman_id": "2657417-4e011b2b-14aa-6542-6491-fa468934e442",
               "request": {
                 "method": "GET",
                 "header": [
@@ -1922,18 +1811,17 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "http://{{url}}:18089/backend/vicare/installations/{{installationId}}/invitations"
               },
               "response": []
             }
           ],
+          "_postman_id": "2657417-8f84b018-d0b2-607b-3107-2abcacc7d0cd",
+          "description": "Folder for backend",
           "_postman_isSubFolder": true
         }
-      ]
+      ],
+      "_postman_id": "2657417-bbd1470a-e6d1-8d3c-28ce-80b0889a3f40"
     }
   ]
 }
