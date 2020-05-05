@@ -1,1058 +1,1827 @@
-FORMAT: 1A
-HOST: http://DefaultParameterValue:18083/backend/monitor
-
-# Everest Backend Structure
-Documentation:  https://wiki.viessmann.com/display/VPL/Everest+Postman+Collections
-
-# Group backend
-
-Folder for backend
-
-## Overview [/overview]
-
-### Get monitor main entry point view [GET]
-Returns list of subentities pointing to buildings and invitations
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## Installations Components [/installations/{installationId}/components]
-
-+ Parameters
-    + installationId (string, required)
-
-
-### Get installation details [GET]
-Returns installation details by given installationID
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18083 Backend Monitor Installations Gateways Heating Devices PairingId Heating Circuits CircuitId [/:18083/backend/monitor/installations/{installationId}/gateways/{gatewaySerial}/heating-devices/{pairingId}/heating-circuits/{circuitId}]
-
-+ Parameters
-    + installationId (string, required)
-
-        + Sample: {{installationId}}
-    + gatewaySerial (string, required)
-
-        + Sample: {{gatewaySerial}}
-    + pairingId (string, required)
-
-        + Sample: {{pairingId}}
-    + circuitId (string, required)
-
-        + Sample: {{circuitId}}
-
-### Get installation circuit details [GET]
-Returns circuit details by given installationID, gatewaySerial, pairingId and circuitId
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18083 Backend Monitor Companies Buildings [/:18083/backend/monitor/companies/{customerNumber}/buildings]
-
-+ Parameters
-    + customerNumber (string, required)
-
-        + Sample: {{customerNumber}}
-
-### Get buildings [GET]
-Returns a list of buildings by given customerNumber
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## Companies Buildings Sidenav [/companies/{customerNumber}/buildings/{buildingId}/sidenav]
-
-+ Parameters
-    + customerNumber (string, required)
-
-    + buildingId (string, required)
-
-
-### Get building details [GET]
-Returns building details by given buildingID
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18083 Backend Monitor Installations Domestic Hot Water Tank Temperature [/:18083/backend/monitor/installations/{installationId}/domestic-hot-water-tank/temperature]
-
-+ Parameters
-    + installationId (string, required)
-
-        + Sample: {{installationId}}
-
-### Get domestic hot water target temperature [GET]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18083 Backend Monitor Users Dashboard Module Widget Monitoring [/:18083/backend/monitor/users/{userId}/dashboard-module-widget/monitoring]
-
-+ Parameters
-    + userId (string, required)
-
-        + Sample: {{userId}}
-
-### Get monitor dashboard module [GET]
-Returns dashboard module by given userID
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18083 Backend Monitor Users Invitations Requested [/:18083/backend/monitor/users/{userId}/invitations/requested]
-
-+ Parameters
-    + userId (string, required)
-
-        + Sample: {{userId}}
-
-### Get requested invitation collection [GET]
-returns requested invitation collection
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18083 Backend Monitor Users Invitations Received [/:18083/backend/monitor/users/{userId}/invitations/received]
-
-+ Parameters
-    + userId (string, required)
-
-        + Sample: {{userId}}
-
-### Get received invitation collection [GET]
-returns received invitation collection
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18083 Backend Monitor Installations Heating Circuits Heating Schedule [/:18083/backend/monitor/installations/{installationId}/heating-circuits/{heatingCircuitsIndex}/heating-schedule]
-
-+ Parameters
-    + installationId (string, required)
-
-        + Sample: {{installationId}}
-    + heatingCircuitsIndex (string, required)
-
-        + Sample: {{heatingCircuitsIndex}}
-
-### Update heating schedule [POST]
-Updates the complete heating schedule.
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## Module Classes [/module-classes]
-
-### Get all module classes [GET]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18081 Backend Dashboard Dashboards [/:18081/backend/dashboard/dashboards/{dashboardId}]
-
-+ Parameters
-    + dashboardId (string, required)
-
-        + Sample: {{dashboardId}}
-
-### httpurl18081backenddashboarddashboardsdashboardId [GET]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-### httpurl18081backenddashboarddashboardsdashboardId [PUT]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-### httpurl18081backenddashboarddashboardsdashboardId [DELETE]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18081 Backend Dashboard Module Classes [/:18081/backend/dashboard/module-classes/{moduleClassId}]
-
-+ Parameters
-    + moduleClassId (string, required)
-
-        + Sample: {{moduleClassId}}
-
-### Get a module classes by ID [GET]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18081 Backend Dashboard Module Widgets [/:18081/backend/dashboard/module-widgets/{moduleWidgetId}]
-
-+ Parameters
-    + moduleWidgetId (string, required)
-
-        + Sample: {{moduleWidgetId}}
-
-### httpurl18081backenddashboardmodulewidgetsmoduleWidgetId [GET]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-### httpurl18081backenddashboardmodulewidgetsmoduleWidgetId [PUT]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-### httpurl18081backenddashboardmodulewidgetsmoduleWidgetId [DELETE]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18081 Backend Dashboard Dashboards Module Widgets [/:18081/backend/dashboard/dashboards/{dashboardId}/module-widgets]
-
-+ Parameters
-    + dashboardId (string, required)
-
-        + Sample: {{dashboardId}}
-
-### httpurl18081backenddashboarddashboardsdashboardIdmodulewidgets [GET]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-### httpurl18081backenddashboarddashboardsdashboardIdmodulewidgets [POST]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18081 Backend Dashboard Users Dashboards [/:18081/backend/dashboard/users/{userId}/dashboards]
-
-+ Parameters
-    + userId (string, required)
-
-        + Sample: {{userId}}
-
-### httpurl18081backenddashboardusersuserIddashboards [GET]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-### httpurl18081backenddashboardusersuserIddashboards [POST]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18082 Backend Gateway Gateways Details [/:18082/backend/gateway/gateways/{gatewaySerial}/details]
-
-+ Parameters
-    + gatewaySerial (string, required)
-
-        + Sample: {{gatewaySerial}}
-
-### Get gateway details [GET]
-Returns details of gateway by given gatewaySerial
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18082 Backend Gateway Gateways Details Reboot [/:18082/backend/gateway/gateways/{gatewaySerial}/details/reboot]
-
-+ Parameters
-    + gatewaySerial (string, required)
-
-        + Sample: {{gatewaySerial}}
-
-### Reboot a gateway [POST]
-Restart a gateway
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18082 Backend Gateway Installations Gateways Unregister [/:18082/backend/gateway/installations/{installationId}/gateways/{gatewaySerial}/unregister]
-
-+ Parameters
-    + gatewaySerial (string, required)
-
-        + Sample: {{gatewaySerial}}
-    + installationId (string, required)
-
-        + Sample: {{installationId}}
-
-### Unregister a gateway [POST]
-Decouples a gateway from an installation
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18085 Backend Activity Stream Users Dashboard Module Widget Activities [/:18085/backend/activity-stream/users/{userId}/dashboard-module-widget/activities]
-
-+ Parameters
-    + userId (string, required)
-
-        + Sample: {{userId}}
-
-### Get all data for the dashboard activities module of a user [GET]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18086 Backend Invitations Accept Wizard [/:18086/backend/invitations/accept/wizard/{wizardId}]
-
-+ Parameters
-    + wizardId (string, required)
-
-        + Sample: {{wizardId}}
-
-### provide the invitation wizard steps accept [POST]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## By WizardId [/{wizardId}]
-
-+ Parameters
-    + wizardId (string, required)
-
-
-### provide the invitation wizard steps create [POST]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 (application/vnd.siren+json)
-
-    + Headers
-
-            Connection:keep-alive
-            Date:Mon, 30 Oct 2017 13:32:02 GMT
-            Transfer-Encoding:chunked
-            cache-control:no-cache
-            content-encoding:gzip
-            request-context:appId=cid-v1:1849cb04-ccf5-4994-b5ff-79afe587e4a8,roleName=be-invitation
-            vary:origin,accept-encoding
-
-    + Attributes (create without new building)
-
-
-    + Body
-
-            {"class":["invitation-wizard"],"properties":{"title":"Frontend-Invitations_INVITATION_WIZARD_TITLE","progressionTitle":"Frontend-Invitations_PAGING_PREFIX","progressionIndex":"1","progressionTotal":"2"},"entities":[{"class":["full-length","text"],"rel":["http://schema.viessmann.com/link-relations#field"],"properties":{"title":"Frontend-Invitations_GATEWAY_ID_TITLE"}},{"class":["full-length","input"],"rel":["http://schema.viessmann.com/link-relations#field"],"properties":{"placeholder":"Frontend-Invitations_GATEWAY_ID_PLACEHOLDER","value":"7571381602763107","actionFieldName":"gatewayId"}}],"actions":[{"name":"next","title":"NEXT","method":"POST","href":"http://52.169.79.192:18086/backend/invitations/create/wizard/1","fields":[{"name":"gatewayId","type":"text","value":"7571381602763107"}]}]}
-
-
-
-## 18088 Backend Profile Example [/:18088/backend/profile/example/{exampleId}{?exampleQuery}]
-
-+ Parameters
-    + exampleId (string, required)
-
-        + Sample: {{exampleId}}
-
-### Get Example [GET]
-Returns an example resource
-+ Parameters
-    + exampleQuery (string, required)
-
-        + Sample: {{exampleQuery}}
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## Contractors Contact By ViCustomerNumber [/contractors/{viCustomerNumber}/contact]
-
-+ Parameters
-    + viCustomerNumber (string, required)
-
-
-### Set contact information [PUT]
-Returns list with heating contractors close to installation address. Query parameters: Option 1: installationId OR Option 2: longitude, latitude, countryCode, Optional and valid for both options: perimeter
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-    + Attributes (Set contact information Request)
-
-
-
-+ Response 200 
-
-
-
-
-## Contractor [/contractor]
-
-### Get the chosen contractor [GET]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-### Remove the chosen contractor [DELETE]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18089 Backend Vicare Contractors [/:18089/backend/vicare/contractors{?installationId}]
-
-### Get contractors [GET]
-+ Parameters
-    + installationId (string, required)
-
-        + Sample: {{installationId}}
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## Contractors Select By CustomerNumber [/contractors/{customerNumber}/select]
-
-+ Parameters
-    + customerNumber (string, required)
-
-
-### Set the chosen contractor [POST]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## Contractors Access By CustomerNumber [/contractors/{customerNumber}/access]
-
-+ Parameters
-    + customerNumber (string, required)
-
-
-### Grant or drop access for monitoring [POST]
-+ Attributes
-    + access (boolean, required)
-
-        + Sample: true
-    + message (string, required)
-
-        + Sample: This is a message
-
-+ Request (application/x-www-form-urlencoded)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## Invitations [/invitations]
-
-### Get invited family  friends [GET]
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-
-# Group User
-
-## 1234 Details [/1234/details]
-
-### Get user details for end customer [GET]
-Returns user details for end customer
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 4567 Details [/4567/details]
-
-### Get user details for heating installer [GET]
-Returns user details for heating installer
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 7890 Details [/7890/details]
-
-### Get user details for viessmann group [GET]
-Returns user details for viessmann group
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18084 Users Users By UserId [/:18084/users/{userId}/users{?userGroup,searchTerm,role}]
-
-+ Parameters
-    + userId (string, required)
-
-        + Sample: {{userId}}
-
-### Get users overview list [GET]
-Returns users overview for given user group as query paramater
-+ Parameters
-    + userGroup (string, required)
-
-        + Sample: {{userGroup}}
-    + searchTerm (string, required)
-
-        + Sample: {{searchTerm}}
-    + role (string, required)
-
-        + Sample: {{role}}
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-## 18084 Users Users By UserId [/:18084/users/{userId}/users]
-
-+ Parameters
-    + userId (string, required)
-
-        + Sample: {{userId}}
-
-### Get users overview list [POST]
-Returns users overview for given user group in post payload
-
-+ Request (application/json)
-    + Headers
-
-            Authorization:{{oauth2}}
-            Accept:application/vnd.siren+json, application/json
-
-
-
-
-
-+ Response 200 
-
-
-
-
-
-# Data Structures
-
-## create without new building (object)
-
-
-### Properties
-+ `class` (array[string], required) 
-+ `properties` (Properties, required) 
-+ `entities` (array[Entity], required) 
-+ `actions` (array[Action], required) 
-
-
-## Properties (object)
-
-
-### Properties
-+ `title` (string, required) 
-+ `progressionTitle` (string, required) 
-+ `progressionIndex` (string, required) 
-+ `progressionTotal` (string, required) 
-
-
-## Entity (object)
-
-
-### Properties
-+ `class` (array[string], required) 
-+ `rel` (array[string], required) 
-+ `properties` (Properties1, required) 
-
-
-## Properties1 (object)
-
-
-### Properties
-+ `title` (string, optional) 
-+ `placeholder` (string, optional) 
-+ `value` (string, optional) 
-+ `actionFieldName` (string, optional) 
-
-
-## Action (object)
-
-
-### Properties
-+ `name` (string, required) 
-+ `title` (string, required) 
-+ `method` (string, required) 
-+ `href` (string, required) 
-+ `fields` (array[Field], required) 
-
-
-## Field (object)
-
-
-### Properties
-+ `name` (string, required) 
-+ `type` (string, required) 
-+ `value` (string, required) 
-
-
-## Set contact information Request (object)
-
-
-### Properties
-+ `phoneNumbers` (array[PhoneNumber], required) 
-+ `emails` (array[Email], required) 
-
-
-## PhoneNumber (object)
-
-
-### Properties
-+ `value` (string, required) 
-+ `favorite` (boolean, required) 
-
-
-## Email (object)
-
-
-### Properties
-+ `value` (string, required) 
-+ `favorite` (boolean, required) 
-
+{
+  "info": {
+    "_postman_id": "2657417-23eb51f6-0821-da7c-f2ef-1eb06d2a16b0",
+    "name": "Everest Backend Structure",
+    "description": "Documentation:  https://wiki.viessmann.com/display/VPL/Everest+Postman+Collections",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Monitor",
+      "item": [
+        {
+          "name": "backend",
+          "item": [
+            {
+              "name": "Get monitor main entry point view",
+              "_postman_id": "2657417-1653bfe2-faa8-5dd9-1051-3ef2f3bf81b0",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": "http://{{url}}:18083/backend/monitor/overview",
+                "description": "Returns list of subentities pointing to buildings and invitations"
+              },
+              "response": []
+            },
+            {
+              "name": "Get installation details",
+              "_postman_id": "2657417-f798d4ec-8e44-5029-16fb-037fd188433c",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": "http://{{url}}:18083/backend/monitor/installations/{{installationId}}/components",
+                "description": "Returns installation details by given installationID"
+              },
+              "response": []
+            },
+            {
+              "name": "Get installation circuit details",
+              "_postman_id": "2657417-0da7666d-b320-5cfc-a890-08a32e0a9642",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18083/backend/monitor/installations/{{installationId}}/gateways/{{gatewaySerial}}/heating-devices/{{pairingId}}/heating-circuits/:circuitId",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18083",
+                  "path": [
+                    "backend",
+                    "monitor",
+                    "installations",
+                    "{{installationId}}",
+                    "gateways",
+                    "{{gatewaySerial}}",
+                    "heating-devices",
+                    "{{pairingId}}",
+                    "heating-circuits",
+                    ":circuitId"
+                  ],
+                  "variable": [
+                    {
+                      "key": "installationId",
+                      "value": "{{installationId}}",
+                      "type": "string"
+                    },
+                    {
+                      "key": "gatewaySerial",
+                      "value": "{{gatewaySerial}}",
+                      "type": "string"
+                    },
+                    {
+                      "key": "pairingId",
+                      "value": "{{pairingId}}",
+                      "type": "string"
+                    },
+                    {
+                      "key": "circuitId",
+                      "value": "{{circuitId}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Returns circuit details by given installationID, gatewaySerial, pairingId and circuitId"
+              },
+              "response": []
+            },
+            {
+              "name": "Get buildings",
+              "_postman_id": "2657417-4980e3fa-d513-4968-e847-16fae2454286",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18083/backend/monitor/companies/{{customerNumber}}/buildings",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18083",
+                  "path": [
+                    "backend",
+                    "monitor",
+                    "companies",
+                    "{{customerNumber}}",
+                    "buildings"
+                  ],
+                  "variable": [
+                    {
+                      "key": "customerNumber",
+                      "value": "{{customerNumber}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Returns a list of buildings by given customerNumber"
+              },
+              "response": []
+            },
+            {
+              "name": "Get building details",
+              "_postman_id": "2657417-12e68675-a1dd-16e8-a152-68a7b0d7b7c9",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": "http://{{url}}:18083/backend/monitor/companies/{{customerNumber}}/buildings/{{buildingId}}/sidenav",
+                "description": "Returns building details by given buildingID"
+              },
+              "response": []
+            },
+            {
+              "name": "Get domestic hot water target temperature",
+              "_postman_id": "2657417-f2c7472e-b50a-78f5-83ac-72e36b7d63f8",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18083/backend/monitor/installations/{{installationId}}/domestic-hot-water-tank/temperature",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18083",
+                  "path": [
+                    "backend",
+                    "monitor",
+                    "installations",
+                    "{{installationId}}",
+                    "domestic-hot-water-tank",
+                    "temperature"
+                  ],
+                  "variable": [
+                    {
+                      "key": "installationId",
+                      "value": "{{installationId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get monitor dashboard module",
+              "_postman_id": "2657417-70b7ba27-b480-d086-e3f6-615b58021365",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18083/backend/monitor/users/{{userId}}/dashboard-module-widget/monitoring",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18083",
+                  "path": [
+                    "backend",
+                    "monitor",
+                    "users",
+                    "{{userId}}",
+                    "dashboard-module-widget",
+                    "monitoring"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Returns dashboard module by given userID"
+              },
+              "response": []
+            },
+            {
+              "name": "Get requested invitation collection",
+              "_postman_id": "2657417-ad3e6eee-c077-2e95-6e4c-da5b2d94aa5a",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18083/backend/monitor/users/{{userId}}/invitations/requested",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18083",
+                  "path": [
+                    "backend",
+                    "monitor",
+                    "users",
+                    "{{userId}}",
+                    "invitations",
+                    "requested"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "returns requested invitation collection"
+              },
+              "response": []
+            },
+            {
+              "name": "Get received invitation collection",
+              "_postman_id": "2657417-18d54683-f7ba-3f60-e719-f0219a3bbc1e",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18083/backend/monitor/users/{{userId}}/invitations/received",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18083",
+                  "path": [
+                    "backend",
+                    "monitor",
+                    "users",
+                    "{{userId}}",
+                    "invitations",
+                    "received"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "returns received invitation collection"
+              },
+              "response": []
+            },
+            {
+              "name": "Update heating schedule",
+              "_postman_id": "2657417-555ab7a1-c595-97e7-d7a1-9164f123e25c",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://{{url}}:18083/backend/monitor/installations/{{installationId}}/heating-circuits/:heatingCircuitsIndex/heating-schedule",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18083",
+                  "path": [
+                    "backend",
+                    "monitor",
+                    "installations",
+                    "{{installationId}}",
+                    "heating-circuits",
+                    ":heatingCircuitsIndex",
+                    "heating-schedule"
+                  ],
+                  "variable": [
+                    {
+                      "key": "installationId",
+                      "value": "{{installationId}}",
+                      "type": "string"
+                    },
+                    {
+                      "key": "heatingCircuitsIndex",
+                      "value": "{{heatingCircuitsIndex}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Updates the complete heating schedule."
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "2657417-c0120f67-4a97-8998-ba36-2eb4ec3417fb",
+          "description": "Folder for backend",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "2657417-65578a87-9da2-4dd3-12ef-b939b93f80e8"
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "backend",
+          "item": [
+            {
+              "name": "Get all module classes",
+              "_postman_id": "2657417-adae7090-f2b8-e047-f18f-c4b27777efa4",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": "http://{{url}}:18081/backend/dashboard/module-classes"
+              },
+              "response": []
+            },
+            {
+              "name": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}",
+              "_postman_id": "2657417-8e6f1bcf-a938-e574-994c-bb4d2089a029",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18081",
+                  "path": [
+                    "backend",
+                    "dashboard",
+                    "dashboards",
+                    "{{dashboardId}}"
+                  ],
+                  "variable": [
+                    {
+                      "key": "dashboardId",
+                      "value": "{{dashboardId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}",
+              "_postman_id": "2657417-0df49cc5-25f6-45bf-78e5-9501101eee47",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18081",
+                  "path": [
+                    "backend",
+                    "dashboard",
+                    "dashboards",
+                    "{{dashboardId}}"
+                  ],
+                  "variable": [
+                    {
+                      "key": "dashboardId",
+                      "value": "{{dashboardId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}",
+              "_postman_id": "2657417-6e20feff-d966-d140-bc4c-36accc607468",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18081",
+                  "path": [
+                    "backend",
+                    "dashboard",
+                    "dashboards",
+                    "{{dashboardId}}"
+                  ],
+                  "variable": [
+                    {
+                      "key": "dashboardId",
+                      "value": "{{dashboardId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get a module classes by ID",
+              "_postman_id": "2657417-e0761f9d-8275-2c1c-c778-82f394d9aaff",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18081/backend/dashboard/module-classes/{{moduleClassId}}",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18081",
+                  "path": [
+                    "backend",
+                    "dashboard",
+                    "module-classes",
+                    "{{moduleClassId}}"
+                  ],
+                  "variable": [
+                    {
+                      "key": "moduleClassId",
+                      "value": "{{moduleClassId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "http://{{url}}:18081/backend/dashboard/module-widgets/{{moduleWidgetId}}",
+              "_postman_id": "2657417-ef0e0b8e-8096-c148-bdd3-f9de77030c6c",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18081/backend/dashboard/module-widgets/{{moduleWidgetId}}",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18081",
+                  "path": [
+                    "backend",
+                    "dashboard",
+                    "module-widgets",
+                    "{{moduleWidgetId}}"
+                  ],
+                  "variable": [
+                    {
+                      "key": "moduleWidgetId",
+                      "value": "{{moduleWidgetId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "http://{{url}}:18081/backend/dashboard/module-widgets/{{moduleWidgetId}}",
+              "_postman_id": "2657417-ee453727-16c5-1a0f-823a-27ebaeae93df",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://{{url}}:18081/backend/dashboard/module-widgets/{{moduleWidgetId}}",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18081",
+                  "path": [
+                    "backend",
+                    "dashboard",
+                    "module-widgets",
+                    "{{moduleWidgetId}}"
+                  ],
+                  "variable": [
+                    {
+                      "key": "moduleWidgetId",
+                      "value": "{{moduleWidgetId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "http://{{url}}:18081/backend/dashboard/module-widgets/{{moduleWidgetId}}",
+              "_postman_id": "2657417-23d14471-876c-1b05-ad0b-b3deb47e5f86",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18081/backend/dashboard/module-widgets/{{moduleWidgetId}}",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18081",
+                  "path": [
+                    "backend",
+                    "dashboard",
+                    "module-widgets",
+                    "{{moduleWidgetId}}"
+                  ],
+                  "variable": [
+                    {
+                      "key": "moduleWidgetId",
+                      "value": "{{moduleWidgetId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}/module-widgets",
+              "_postman_id": "2657417-5eed4589-7e9b-eda8-8dc2-32e925cfee05",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}/module-widgets",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18081",
+                  "path": [
+                    "backend",
+                    "dashboard",
+                    "dashboards",
+                    "{{dashboardId}}",
+                    "module-widgets"
+                  ],
+                  "variable": [
+                    {
+                      "key": "dashboardId",
+                      "value": "{{dashboardId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}/module-widgets",
+              "_postman_id": "2657417-ade63ce1-5e8b-a3a1-f097-55a91f8badfb",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://{{url}}:18081/backend/dashboard/dashboards/{{dashboardId}}/module-widgets",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18081",
+                  "path": [
+                    "backend",
+                    "dashboard",
+                    "dashboards",
+                    "{{dashboardId}}",
+                    "module-widgets"
+                  ],
+                  "variable": [
+                    {
+                      "key": "dashboardId",
+                      "value": "{{dashboardId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "http://{{url}}:18081/backend/dashboard/users/{{userId}}/dashboards",
+              "_postman_id": "2657417-7c340907-3d24-ace4-4871-f0d90b7143d8",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18081/backend/dashboard/users/{{userId}}/dashboards",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18081",
+                  "path": [
+                    "backend",
+                    "dashboard",
+                    "users",
+                    "{{userId}}",
+                    "dashboards"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "http://{{url}}:18081/backend/dashboard/users/{{userId}}/dashboards",
+              "_postman_id": "2657417-66a88dc3-7d7c-25ca-9461-1d3a9494c5b3",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18081/backend/dashboard/users/{{userId}}/dashboards",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18081",
+                  "path": [
+                    "backend",
+                    "dashboard",
+                    "users",
+                    "{{userId}}",
+                    "dashboards"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "2657417-7f292709-6495-4ba3-102c-e19c98f3a8f8",
+          "description": "Folder for backend",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "2657417-83a82ec3-15b3-0b6f-3199-09479e8f8953"
+    },
+    {
+      "name": "Gateway",
+      "item": [
+        {
+          "name": "backend",
+          "item": [
+            {
+              "name": "Get gateway details",
+              "_postman_id": "2657417-1402fe90-05d1-2762-a281-6e5423a9fc25",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18082/backend/gateway/gateways/{{gatewaySerial}}/details",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18082",
+                  "path": [
+                    "backend",
+                    "gateway",
+                    "gateways",
+                    "{{gatewaySerial}}",
+                    "details"
+                  ],
+                  "variable": [
+                    {
+                      "key": "gatewaySerial",
+                      "value": "{{gatewaySerial}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Returns details of gateway by given gatewaySerial"
+              },
+              "response": []
+            },
+            {
+              "name": "Reboot a gateway",
+              "_postman_id": "2657417-d2d5f1a7-64f8-268d-0d83-839a23edeaaa",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18082/backend/gateway/gateways/{{gatewaySerial}}/details/reboot",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18082",
+                  "path": [
+                    "backend",
+                    "gateway",
+                    "gateways",
+                    "{{gatewaySerial}}",
+                    "details",
+                    "reboot"
+                  ],
+                  "variable": [
+                    {
+                      "key": "gatewaySerial",
+                      "value": "{{gatewaySerial}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Restart a gateway"
+              },
+              "response": []
+            },
+            {
+              "name": "Unregister a gateway",
+              "_postman_id": "2657417-879c1a0b-820a-659e-5bf7-c9a874b59330",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18082/backend/gateway/installations/{{installationId}}/gateways/{{gatewaySerial}}/unregister",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18082",
+                  "path": [
+                    "backend",
+                    "gateway",
+                    "installations",
+                    "{{installationId}}",
+                    "gateways",
+                    "{{gatewaySerial}}",
+                    "unregister"
+                  ],
+                  "variable": [
+                    {
+                      "key": "gatewaySerial",
+                      "value": "{{gatewaySerial}}",
+                      "type": "string"
+                    },
+                    {
+                      "key": "installationId",
+                      "value": "{{installationId}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Decouples a gateway from an installation"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "2657417-941022ba-5384-2029-c255-f2b628c8cd44",
+          "description": "Folder for backend",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "2657417-60773510-146a-1ff6-5fc1-af01c6c63677"
+    },
+    {
+      "name": "Activity Stream",
+      "item": [
+        {
+          "name": "backend",
+          "item": [
+            {
+              "name": "Get all data for the dashboard activities module of a user",
+              "_postman_id": "2657417-51e31249-75a8-834c-7ef4-f877a34ca1ef",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18085/backend/activity-stream/users/{{userId}}/dashboard-module-widget/activities",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18085",
+                  "path": [
+                    "backend",
+                    "activity-stream",
+                    "users",
+                    "{{userId}}",
+                    "dashboard-module-widget",
+                    "activities"
+                  ],
+                  "variable": [
+                    {
+                      "key": "userId",
+                      "value": "{{userId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "2657417-883a6b24-2a7d-ea4c-69bf-e7593535c1c9",
+          "description": "Folder for backend",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "2657417-ee2ba13a-4851-03c3-0848-568eec06d6a7"
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Get user details for end customer",
+          "_postman_id": "2657417-de0f9d08-c5ce-7300-37c7-7743968950b4",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{oauth2}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/vnd.siren+json, application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://{{url}}:18084/users/1234/details",
+            "description": "Returns user details for end customer"
+          },
+          "response": []
+        },
+        {
+          "name": "Get user details for heating installer",
+          "_postman_id": "2657417-c3ea79a9-ee62-774a-306d-be3c406ea960",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{oauth2}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/vnd.siren+json, application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://{{url}}:18084/users/4567/details",
+            "description": "Returns user details for heating installer"
+          },
+          "response": []
+        },
+        {
+          "name": "Get user details for viessmann group",
+          "_postman_id": "2657417-64a771ad-c652-4eb1-7114-c189e1ac2342",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{oauth2}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/vnd.siren+json, application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://{{url}}:18084/users/7890/details",
+            "description": "Returns user details for viessmann group"
+          },
+          "response": []
+        },
+        {
+          "name": "Get users overview list",
+          "_postman_id": "2657417-9728f47e-5daa-1523-f183-bb4d8e0372f6",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{oauth2}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/vnd.siren+json, application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://{{url}}:18084/users/{{userId}}/users?userGroup={{userGroup}}&searchTerm={{searchTerm}}&role={{role}}",
+              "protocol": "http",
+              "host": [
+                "{{url}}"
+              ],
+              "port": "18084",
+              "path": [
+                "users",
+                "{{userId}}",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "userGroup",
+                  "value": "{{userGroup}}"
+                },
+                {
+                  "key": "searchTerm",
+                  "value": "{{searchTerm}}"
+                },
+                {
+                  "key": "role",
+                  "value": "{{role}}"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns users overview for given user group as query paramater"
+          },
+          "response": []
+        },
+        {
+          "name": "Get users overview list",
+          "_postman_id": "2657417-a318ecdc-da19-c5c3-1db1-bfcbc3f01d73",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{oauth2}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/vnd.siren+json, application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://{{url}}:18084/users/{{userId}}/users",
+              "protocol": "http",
+              "host": [
+                "{{url}}"
+              ],
+              "port": "18084",
+              "path": [
+                "users",
+                "{{userId}}",
+                "users"
+              ],
+              "variable": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "description": "Returns users overview for given user group in post payload"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "2657417-1c7e2508-2ae7-29c8-e129-aef7f03db950"
+    },
+    {
+      "name": "Invitation",
+      "item": [
+        {
+          "name": "backend",
+          "item": [
+            {
+              "name": "provide the invitation wizard steps (accept)",
+              "_postman_id": "2657417-0a7fbfa9-1174-ae94-9e22-612a08f5f26e",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://{{url}}:18086/backend/invitations/accept/wizard/{{wizardId}}",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18086",
+                  "path": [
+                    "backend",
+                    "invitations",
+                    "accept",
+                    "wizard",
+                    "{{wizardId}}"
+                  ],
+                  "variable": [
+                    {
+                      "key": "wizardId",
+                      "value": "{{wizardId}}",
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "provide the invitation wizard steps (create)",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test(\"Status code is 200\", function () {",
+                      "    pm.response.to.have.status(200);",
+                      "});"
+                    ]
+                  }
+                }
+              ],
+              "_postman_id": "2657417-4deb97f6-5c8c-c605-dbd1-11367a06fe58",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "http://{{url}}:18086/backend/invitations/create/wizard/{{wizardId}}"
+              },
+              "response": [
+                {
+                  "id": "2657417-7951ed4e-8ae0-eb0a-d93d-09c4f7437673",
+                  "name": "create without new building",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "{{oauth2}}"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/vnd.siren+json, application/json"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"gatewayId\": \"7571381602763107\",\r\n  \"buildingId\": \"51\",\r\n  \"createNewBuilding\": false\r\n}"
+                    },
+                    "url": "http://{{url}}:18086/backend/invitations/create/wizard/0"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive",
+                      "name": "Connection",
+                      "description": ""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Mon, 30 Oct 2017 13:32:02 GMT",
+                      "name": "Date",
+                      "description": ""
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked",
+                      "name": "Transfer-Encoding",
+                      "description": ""
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "no-cache",
+                      "name": "cache-control",
+                      "description": ""
+                    },
+                    {
+                      "key": "content-encoding",
+                      "value": "gzip",
+                      "name": "content-encoding",
+                      "description": ""
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/vnd.siren+json",
+                      "name": "content-type",
+                      "description": ""
+                    },
+                    {
+                      "key": "request-context",
+                      "value": "appId=cid-v1:1849cb04-ccf5-4994-b5ff-79afe587e4a8,roleName=be-invitation",
+                      "name": "request-context",
+                      "description": ""
+                    },
+                    {
+                      "key": "vary",
+                      "value": "origin,accept-encoding",
+                      "name": "vary",
+                      "description": ""
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": "133",
+                  "body": "{\"class\":[\"invitation-wizard\"],\"properties\":{\"title\":\"Frontend-Invitations_INVITATION_WIZARD_TITLE\",\"progressionTitle\":\"Frontend-Invitations_PAGING_PREFIX\",\"progressionIndex\":\"1\",\"progressionTotal\":\"2\"},\"entities\":[{\"class\":[\"full-length\",\"text\"],\"rel\":[\"http://schema.viessmann.com/link-relations#field\"],\"properties\":{\"title\":\"Frontend-Invitations_GATEWAY_ID_TITLE\"}},{\"class\":[\"full-length\",\"input\"],\"rel\":[\"http://schema.viessmann.com/link-relations#field\"],\"properties\":{\"placeholder\":\"Frontend-Invitations_GATEWAY_ID_PLACEHOLDER\",\"value\":\"7571381602763107\",\"actionFieldName\":\"gatewayId\"}}],\"actions\":[{\"name\":\"next\",\"title\":\"NEXT\",\"method\":\"POST\",\"href\":\"http://52.169.79.192:18086/backend/invitations/create/wizard/1\",\"fields\":[{\"name\":\"gatewayId\",\"type\":\"text\",\"value\":\"7571381602763107\"}]}]}"
+                }
+              ]
+            }
+          ],
+          "_postman_id": "2657417-32e87a81-1566-ca67-a210-1e63646948a8",
+          "description": "Folder for backend",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "2657417-ac2c5399-7b6d-5120-7dfe-cdb0187b6902"
+    },
+    {
+      "name": "Profile",
+      "item": [
+        {
+          "name": "backend",
+          "item": [
+            {
+              "name": "Get Example",
+              "_postman_id": "2657417-109c2338-62b4-9a6d-0770-969bb8eb5aa1",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18088/backend/profile/example/{{exampleId}}?exampleQuery={{exampleQuery}}",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18088",
+                  "path": [
+                    "backend",
+                    "profile",
+                    "example",
+                    "{{exampleId}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "exampleQuery",
+                      "value": "{{exampleQuery}}"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "exampleId",
+                      "value": "{{exampleId}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "description": "Returns an example resource"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "2657417-a819d58f-ee55-d737-ebb7-5305b679dea9",
+          "description": "Folder for backend",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "2657417-9c0f7661-6d89-0f24-1a7f-a0e95366785d"
+    },
+    {
+      "name": "ViCare",
+      "item": [
+        {
+          "name": "backend",
+          "item": [
+            {
+              "name": "Set contact information",
+              "_postman_id": "2657417-d3d5f64b-d54a-8a30-2497-0736e0f49d0f",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"phoneNumbers\": [\n\t\t{\n\t\t\t\"value\" : \"123456789\",\n\t\t\t\"favorite\": false\n\t\t},\n\t\t{\n\t\t\t\"value\" : \"987654321\",\n\t\t\t\"favorite\": true\n\t\t}\n\t],\n\t\"emails\": [\n\t\t{\n\t\t\t\"value\" : \"info@röhring.de\",\n\t\t\t\"favorite\": false\n\t\t},\n\t\t{\n\t\t\t\"value\" : \"christian@röhrig.de\",\n\t\t\t\"favorite\": true\n\t\t}\n\t]\n}"
+                },
+                "url": "http://{{url}}:18089/backend/vicare/installations/{{installationId}}/contractors/{{viCustomerNumber}}/contact",
+                "description": "Returns list with heating contractors close to installation address. Query parameters: Option 1: installationId OR Option 2: longitude, latitude, countryCode, Optional and valid for both options: perimeter"
+              },
+              "response": []
+            },
+            {
+              "name": "Get the chosen contractor",
+              "_postman_id": "2657417-4a4b51ae-9b19-1a33-10e9-c1ee37e3f4f6",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": "http://{{url}}:18089/backend/vicare/installations/{{installationId}}/contractor"
+              },
+              "response": []
+            },
+            {
+              "name": "Remove the chosen contractor",
+              "_postman_id": "2657417-aa94513f-6e71-7861-df6a-2dda964fea57",
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": "http://{{url}}:18089/backend/vicare/installations/{{installationId}}/contractor"
+              },
+              "response": []
+            },
+            {
+              "name": "Get contractors",
+              "_postman_id": "2657417-82070245-c6de-f6c4-f798-c3557941ae67",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "http://{{url}}:18089/backend/vicare/contractors?installationId={{installationId}}",
+                  "protocol": "http",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "port": "18089",
+                  "path": [
+                    "backend",
+                    "vicare",
+                    "contractors"
+                  ],
+                  "query": [
+                    {
+                      "key": "installationId",
+                      "value": "{{installationId}}"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Set the chosen contractor",
+              "_postman_id": "2657417-2a206122-1217-1c52-4e9d-e31dedab23ac",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": "http://{{url}}:18089/backend/vicare/installations/{{installationId}}/contractors/{{customerNumber}}/select"
+              },
+              "response": []
+            },
+            {
+              "name": "Grant or drop access for monitoring",
+              "_postman_id": "2657417-866cf6de-2d2b-f750-d126-d7c94244646d",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "key": "access",
+                      "value": "true",
+                      "type": "text"
+                    },
+                    {
+                      "key": "message",
+                      "value": "This is a message",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": "http://{{url}}:18089/backend/vicare/installations/{{installationId}}/contractors/{{customerNumber}}/access"
+              },
+              "response": []
+            },
+            {
+              "name": "Get invited family & friends",
+              "_postman_id": "2657417-4e011b2b-14aa-6542-6491-fa468934e442",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{oauth2}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.siren+json, application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": "http://{{url}}:18089/backend/vicare/installations/{{installationId}}/invitations"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "2657417-8f84b018-d0b2-607b-3107-2abcacc7d0cd",
+          "description": "Folder for backend",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "2657417-bbd1470a-e6d1-8d3c-28ce-80b0889a3f40"
+    }
+  ]
+}
